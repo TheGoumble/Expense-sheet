@@ -1,12 +1,25 @@
 import { useState } from "react"
-
+export const number = 1
 
 export default function Income() {
-    const [income, setIncome] = useState(0)
-  return (
-    <>
-      <input type="number" id="income"></input>
-      <button>Submit</button>
-    </>
+    const [IncomeMessage,setIncomeMessage] = useState('')
+
+    const [IncomeValue, setIncomeValue] = useState(0)
+    const handleChange = (event) => {
+       setIncomeValue(event.target.value)
+       //console.log(event.target.value)
+    }
+    const handleClick = (event) => {
+        event.preventDefault() 
+        setIncomeMessage(IncomeValue)
+
+
+    }
+  return (<form>
+  <p>Please enter your monthly Income</p>
+  <input type="number" name="Income" id="Income" onChange={handleChange}></input>
+  <button onClick={handleClick}>Submit</button>
+  <p>Your income is ${IncomeMessage}</p>
+  </form>  
   )
 }
