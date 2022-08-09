@@ -1,6 +1,6 @@
 import React from "react";
-export default function Sum(){
+export default function Sum({income, expense}){
     return(
-        <h3>This will be where the sum is</h3>
+        <h3>After substacting expense you are left with {income - expense} to spend on what ever you want</h3>
     )
 }
