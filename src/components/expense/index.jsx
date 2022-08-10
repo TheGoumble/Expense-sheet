@@ -13,16 +13,17 @@ export default function Expense({ expense, setExpense }) {
     setExpenseMessage(expense)
   }
   return (
-    <form>
+    <form id = "expense">
       <p>Please enter your monthly Expenses</p>
       <input
         type="number"
         name="Expense"
         id="Expense"
+        placeholder="Type the expense"
         onChange={handleChange}
       ></input>
       <button onClick={handleClick}>Submit</button>
-      <p>Your expense is ${expenseMessage}</p>
+      <p>Your expenses are ${expenseMessage}</p>
     </form>
   )
 }

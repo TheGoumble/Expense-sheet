@@ -12,16 +12,17 @@ export default function Income({ income, setIncome }) {
     setIncomeMessage(income)
   }
   return (
-    <form>
-      <p>Please enter your monthly Income</p>
-      <input
-        type="number"
-        name="Income"
-        id="Income"
-        onChange={handleChange}
-      ></input>
-      <button onClick={handleClick}>Submit</button>
-      <p>Your income is ${IncomeMessage}</p>
-    </form>
+      <form id="income">
+        <p>Please enter your monthly Income</p>
+        <input
+          type="number"
+          name="Income"
+          id="Income"
+          placeholder="Type the income"
+          onChange={handleChange}
+        ></input>
+        <button onClick={handleClick}>Submit</button>
+        <p>Your income is ${IncomeMessage}</p>
+      </form>
   )
 }
